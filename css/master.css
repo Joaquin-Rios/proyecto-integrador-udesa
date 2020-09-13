@@ -1,0 +1,38 @@
+.header{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+   
+}
+ img{
+     width: 100%;
+ }
+ .logo{
+     width: 30%;
+     
+ }
+ .menu{
+     width: 70%;
+ }
+ .menu .opciones {
+     display: flex;
+     justify-content: space-around;
+     
+     
+     
+
+ }
+ .opciones li{
+     color: white;
+     padding: 15px;
+
+ }
+ .opciones li a{
+     color: steelblue;
+     text-decoration: none;
+     
+ }
+ .opciones li a:hover{
+    text-decoration: underline;
+}
