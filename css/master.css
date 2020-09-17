@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 .conteiner{
     display: grid;
     
@@ -8,6 +13,8 @@
     display: flex;
     justify-content: space-between;
     border-bottom:5px solid steelblue ;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
 
    
 }
@@ -35,7 +42,7 @@
 
  }
  .opciones li a{
-     color: steelblue;
+     color: rgb(14, 172, 235);
      text-decoration: none;
      
  }
@@ -56,14 +63,43 @@
     text-align: center;
     background-color: black;
     color: steelblue;
+    font-family: 'Montserrat', sans-serif;
     
 }
 .Tendencias{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 10px;
+    font-family: 'Russo One', sans-serif;
+    margin: 20px;
 }
 .Tendencias img{
     width: 50%;
     justify-content: center;
+}
+.Tendencias article img{
+    margin: 20px;
+    border: 5px solid rgb(150, 147, 147) ;
+}
+.footer{
+    background-color:wheat;
+    color: steelblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    border-top: 5px solid steelblue;
+}
+.partesuperior{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 13px;
+}
+.parteinferior{
+    width: 15%;
+}
+.parteinferior a{
+    justify-content: center;
+    align-items: center;
+    color: steelblue;
+    font-size: 20px ;
 }
