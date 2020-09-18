@@ -58,6 +58,15 @@
     background-size: cover;
     background-attachment: fixed;
     border-bottom: 5px solid steelblue;
+    
+    
+}
+.Bienvenidos{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: steelblue;
+    background-color: black;
+    padding: 15px;
 }
 .peliculas{
     text-align: center;
@@ -65,6 +74,9 @@
     color: steelblue;
     font-family: 'Montserrat', sans-serif;
     
+}
+.peliculas h2{
+    padding: 10px;
 }
 .Tendencias{
     display: grid;
@@ -104,9 +116,6 @@
     font-size: 20px ;
 }
 
-.generos{
-    text-align: center;
-    color: steelblue;
+
     
 
-}

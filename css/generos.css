@@ -1,0 +1,9 @@
+.generos{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom:5px solid steelblue ;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center; 
+}
