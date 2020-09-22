@@ -115,6 +115,25 @@
     color: steelblue;
     font-size: 20px ;
 }
+.Generos {
+text-align: center;
+background-color: black;
+font-size: 30px;
+}
+.Generos li{
+    display: grid;
+    grid-template-rows: 90px;
+}
+.Generos li a {
+    text-align: center;
+    color: steelblue;
+    text-decoration: none;
+    border: 1px solid rgb(150, 147, 147);
+    padding: 22px;
+}
+.Generos li a:hover{
+    text-decoration: underline;
+}
 
 
     
