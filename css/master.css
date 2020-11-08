@@ -11,24 +11,30 @@
     background-color: white;
     width: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0,5fr 0,5fr;
 
     border-bottom:5px solid steelblue ;
     font-family: 'Montserrat', sans-serif;
     align-items: center;
+    text-align: center;
+    
 }
  img{
      width: 100%;
+     
  }
  .logo{
-     width:50%;
+     width:100%;
  }
  .menu{
      width: 100%;
  }
  .menu .opciones {
-     display: flex;
-     justify-content: space-around;
+    /*display: flex;
+     justify-content: space-around;*/
+     display: grid;
+     grid-template-rows: 1fr 1fr 1fr 1fr;
+
  }
  .opciones li{
      color: white;
@@ -77,15 +83,19 @@
     grid-template-columns: 1fr;
     column-gap: 10px;
     font-family: 'Russo One', sans-serif;
-    margin: 20px;
+    margin: 30px;
+    
+
 }
 .Tendencias img{
-    width: 50%;
+    width: 100%;
     justify-content: center;
+    
 }
 .Tendencias article img{
     margin: 20px;
     border: 5px solid rgb(150, 147, 147);
+    justify-content: center;
 }
 .boton img{
     position: relative;
@@ -101,12 +111,15 @@
     
 }
 .footer{
-    background-color:wheat;
-    color: steelblue;
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
+    background-color: rgb(94, 92, 92);
+    color: white;
+    display: grid;
+    padding: 10px;
     border-top: 5px solid steelblue;
+    grid-template-rows: 0,5fr 0,5fr 0,2fr;
+    row-gap:35px ;
+    justify-content: center;
+
 }
 .partesuperior{
     font-family: 'Montserrat', sans-serif;
@@ -115,13 +128,13 @@
 
 }
 .parteinferior{
-    width: 15%;
+    width: 100%;
+    align-items: center;
 }
 .parteinferior a{
-    justify-content: center;
-    align-items: center;
-    color: steelblue;
-    font-size: 20px ;
+    color: white;
+    font-size: 20px;
+    
 }
 .Generos {
 text-align: center;
@@ -181,7 +194,13 @@ font-size: 30px;
         border-bottom:5px solid steelblue ;
         font-family: 'Montserrat', sans-serif;
         align-items: center;
+        position: fixed;
+
     }
+    .menu .opciones {
+        display: flex;
+         justify-content: space-around;
+    }     
     .logo{
         width: 40%;
     }
@@ -197,12 +216,18 @@ font-size: 30px;
         right: 15%;
     }
     .footer{
-        background-color:wheat;
-        color: steelblue;
+        background-color:rgb(94, 92, 92);
+        color: white;
         display: flex;
         justify-content: space-between;
         padding: 10px;
         border-top: 5px solid steelblue;
+    }
+    .partesuperior{
+        width: 33%;
+    }
+    .parteinferior{
+        width: 33%;
     }
     .detalle{
         background-color: black;
@@ -225,7 +250,14 @@ font-size: 30px;
         border-bottom:5px solid steelblue ;
         font-family: 'Montserrat', sans-serif;
         align-items: center;
+        position: fixed;
     }
+    .menu .opciones {
+        display: flex;
+         justify-content: space-around;
+         /*display: grid;
+         grid-template-rows: 1fr 1fr 1fr 1fr;*/
+    }     
     .logo{
         width: 40%;
     }
@@ -242,6 +274,15 @@ font-size: 30px;
     }
     .footer{
         padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .partesuperior{
+        width: 33%;
+    }
+    .parteinferior{
+        width: 33%;
     }
     .detalle{
         background-color: black;
