@@ -177,7 +177,6 @@ font-size: 30px;
         display: flex;
         justify-content: space-between;
         grid-template-rows: 1fr;
-    
         border-bottom:5px solid steelblue ;
         font-family: 'Montserrat', sans-serif;
         align-items: center;
