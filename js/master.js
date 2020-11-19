@@ -12,12 +12,19 @@ window.addEventListener('load', function(){
                 let articulo = document.createElement('article')
                 articulo.innerHTML += `<img src='https://image.tmdb.org/t/p/w500${pelicula.poster_path}' alt='${pelicula.title}'/> `
                 primeraseccion.append(articulo)
+
+                articulo.style.height = '50 px';
+
+                articulo.style.display = 'flex';
+               // articulo.style.gridTemplateRows = '1fr 1fr ';
          
         });
     })
     .catch(function(error){
         console.log(error);
     })
+
+   
 
     let segundaseccion = document.querySelector('.segundaseccion');
 

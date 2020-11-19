@@ -49,7 +49,7 @@
  .opciones li a:hover{
     text-decoration: underline;
 }
-.banner{
+/*.banner{
     background-image: url(../assets/movie-2545676_1280.jpg);
     width: 100%;
     height: 500px;
@@ -58,9 +58,14 @@
     background-size: cover;
     background-attachment: fixed;
     border-bottom: 5px solid steelblue;
-    
-    
-}
+  */
+
+.carrusel{
+    width: 100%;
+    height: 200px;
+   ;
+}    
+
 .Bienvenidos{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -73,6 +78,7 @@
     background-color: black;
     color: steelblue;
     font-family: 'Montserrat', sans-serif;
+    
     
 }
 .peliculas h2{
