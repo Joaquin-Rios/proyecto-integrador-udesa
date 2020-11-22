@@ -10,35 +10,35 @@
 .header{
     background-color: white;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: 0,5fr 0,5fr;
+
     border-bottom:5px solid steelblue ;
     font-family: 'Montserrat', sans-serif;
     align-items: center;
-
-   
+    text-align: center;
+    
 }
  img{
      width: 100%;
+     
  }
  .logo{
-     width: 30%;
-     
+     width:100%;
  }
  .menu{
-     width: 70%;
+     width: 100%;
  }
  .menu .opciones {
-     display: flex;
-     justify-content: space-around;
-     
-     
-     
+    /*display: flex;
+     justify-content: space-around;*/
+     display: grid;
+     grid-template-rows: 1fr 1fr 1fr 1fr;
 
  }
  .opciones li{
      color: white;
-     padding: 15px;
+     padding: 10px;
 
  }
  .opciones li a{
@@ -49,7 +49,7 @@
  .opciones li a:hover{
     text-decoration: underline;
 }
-.banner{
+/*.banner{
     background-image: url(../assets/movie-2545676_1280.jpg);
     width: 100%;
     height: 500px;
@@ -58,9 +58,14 @@
     background-size: cover;
     background-attachment: fixed;
     border-bottom: 5px solid steelblue;
-    
-    
-}
+  */
+
+.carrusel{
+    width: 100%;
+    height: 200px;
+   ;
+}    
+
 .Bienvenidos{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -74,6 +79,7 @@
     color: steelblue;
     font-family: 'Montserrat', sans-serif;
     
+    
 }
 .peliculas h2{
     padding: 10px;
@@ -83,37 +89,58 @@
     grid-template-columns: 1fr;
     column-gap: 10px;
     font-family: 'Russo One', sans-serif;
-    margin: 20px;
+    margin: 30px;
+    
+
 }
 .Tendencias img{
-    width: 50%;
+    width: 100%;
     justify-content: center;
+    
 }
 .Tendencias article img{
     margin: 20px;
-    border: 5px solid rgb(150, 147, 147) ;
+    border: 5px solid rgb(150, 147, 147);
+    justify-content: center;
+}
+.boton img{
+    position: relative;
+}
+.estreno{
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    background-color: steelblue;
+    border-radius: 10px;
+    top: 300%;
+    right: 15%;
+    
 }
 .footer{
-    background-color:wheat;
-    color: steelblue;
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
+    background-color: rgb(94, 92, 92);
+    color: white;
+    display: grid;
+    padding: 10px;
     border-top: 5px solid steelblue;
+    grid-template-rows: 0,5fr 0,5fr 0,2fr;
+    row-gap:35px ;
+    justify-content: center;
+
 }
 .partesuperior{
     font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
     font-size: 13px;
+
 }
 .parteinferior{
-    width: 15%;
+    width: 100%;
+    align-items: center;
 }
 .parteinferior a{
-    justify-content: center;
-    align-items: center;
-    color: steelblue;
-    font-size: 20px ;
+    color: white;
+    font-size: 20px;
+    
 }
 .Generos {
 text-align: center;
@@ -129,12 +156,149 @@ font-size: 30px;
     color: steelblue;
     text-decoration: none;
     border: 1px solid rgb(150, 147, 147);
+<<<<<<< HEAD
     padding: 22git px;
+=======
+    padding: 22px;
+    font-family: 'Russo One', sans-serif;
+
+>>>>>>> eddd5de27ca6f202a56d4c918474787a56040e9b
 }
 .Generos li a:hover{
     text-decoration: underline;
 }
+.detalle{
+    background-color: black;
+    display: grid;
+    grid-template-rows: 0.5fr 1fr;
+}
+.infofoto{
+    width: 100%;
+    padding: 20px;
+}
+.infofoto img{
+    border: 3px solid gray;
+}
+
+.info{
+    color:steelblue;
+    padding: 30px;
+
+}
+.info h2{
+    font-family:'Russo One', sans-serif;
+    font-size: 50px;
+}
+.info h3{
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (min-width:768px){
+    .header{
+        background-color: white;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        grid-template-rows: 1fr;
+        border-bottom:5px solid steelblue ;
+        font-family: 'Montserrat', sans-serif;
+        align-items: center;
+        position: fixed;
+
+    }
+    .menu .opciones {
+        display: flex;
+         justify-content: space-around;
+    }     
+    .logo{
+        width: 40%;
+    }
+    .Tendencias{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+        font-family: 'Russo One', sans-serif;
+        margin: 30px;
+    }
+    .estreno{
+        top: 195%;
+        right: 15%;
+    }
+    .footer{
+        background-color:rgb(94, 92, 92);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-top: 5px solid steelblue;
+    }
+    .partesuperior{
+        width: 33%;
+    }
+    .parteinferior{
+        width: 33%;
+    }
+    .detalle{
+        background-color: black;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
 
 
+}
+
+@media (min-width:1024px){
+    .header{
+        background-color: white;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        grid-template-rows: 1fr;
     
+        border-bottom:5px solid steelblue ;
+        font-family: 'Montserrat', sans-serif;
+        align-items: center;
+        position: fixed;
+    }
+    .menu .opciones {
+        display: flex;
+         justify-content: space-around;
+         /*display: grid;
+         grid-template-rows: 1fr 1fr 1fr 1fr;*/
+    }     
+    .logo{
+        width: 40%;
+    }
+    .Tendencias{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 10px;
+        font-family: 'Russo One', sans-serif;
+        margin: 30px;
+    }
+    .estreno{
+        top: 125%;
+        right: 8%;
+    }
+    .footer{
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .partesuperior{
+        width: 33%;
+    }
+    .parteinferior{
+        width: 33%;
+    }
+    .detalle{
+        background-color: black;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 3fr;
+    }
 
+
+}

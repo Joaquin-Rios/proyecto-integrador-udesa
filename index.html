@@ -7,40 +7,71 @@
     <link rel="stylesheet" href="css/master.css">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="uikit-3.5.9/css/uikit.min.css" />
+    <script src="uikit-3.5.9/js/uikit.min.js"></script>
+    <script src="uikit-3.5.9/js/uikit-icons.min.js"></script>
+    
 </head>
 <body>
     <main class="conteiner">
         <header class="header">
-            <nav class="logo">
-                <img src="assets/startfilms.jpg" alt="Logo">
-            </nav>
+            <div class="logo">
+                <a href="index.html"><img src="assets/logoheader2.jpg" alt="Logo"></a>
+            </div>
+
             <nav class="menu">
                 <ul class="opciones">
                     <li>
                         <a href="index.html">Inicio</a>
                     </li>
                     <li>
-                        <a href="generos.html">Generos</a>
+                        <a href="generos.html">Géneros</a>
                     </li>
                     <li>
                         <a href="#">Recomendado</a>
                     </li>
                     <li>
-                        <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+                        <form class="uk-search uk-search-default">
+                            <input class="uk-search-input" type="search" placeholder="Search...">
+                        </form>
                     </li>
                 </ul>
                 
             </nav>
             
         </header>
-        <section class="banner">
-            
-        </section>
         <h1 class="Bienvenidos"> Bienvenidos a Start Films</h1>
-        <section class="peliculas">
+        <section class="carrusel">
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+
+                <ul class="uk-slideshow-items">
+                    <li>
+                        <img src="assets/Superman.jpg" alt="foto1" uk-cover>
+                    </li>
+                    <li>
+                        <img src="assets/Thor.jpg" alt="foto2" uk-cover>
+                    </li>
+                    <li>
+                        <img src="assets/AvengersSlider.jpg" alt="foto3" uk-cover>
+                    </li>
+                </ul>
+            
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+            
+            </div>
+        </section>
+        
+        <br>
+        <br>
+        <br>
+        
+        <section class="primeraseccion">
             <hr color="steelblue">
-            <h2> Peliculas en Tendencias </h2>
+            <h2 class="peliculas"> Películas Populares </h2>
             <hr color="steelblue">
+        </section>
+            <!--
             <div class="Tendencias">
                 <article>
                 <img src="assets/soncomoniños.jpg" alt="Pelicula">
@@ -54,16 +85,23 @@
                 <img src="assets/pesadillas.jpg" alt="Peliculas">
                 <h3>Pesadillas</h3>
                 </article>
-                <article>
+                <article class="boton">
                 <img src="assets/titanesdelpacifico.png" alt="Pelicula">
-                <h3>Titanes del Pacifico</h3>
+                <a class="estreno" href="detalle.html">Estreno</a>
+                <h3>Titanes del Pacífico</h3>
+                
                 </article> 
             </div>
+        -->
+
+        
+        <section class="segundaseccion">
+            <hr color="steelblue">
+            <h2 class="peliculas"> Proximamente</h2>
+            <hr color="steelblue">
         </section>
-        <section class="peliculas">
-            <hr color="steelblue">
-            <h2> Peliculas mas vistas en Argentina</h2>
-            <hr color="steelblue">
+        
+            <!--
             <div class="Tendencias">
                 <article>
                     <img src="assets/civilwar.jpg" alt="Pelicula">
@@ -83,10 +121,13 @@
                 </article> 
             </div>
         </section>
-        <section class="peliculas">
+    -->
+        <section class="terceraseccion">
             <hr color="steelblue">
-            <h2>Nuevos estrenos</h2>
+            <h2 class="peliculas">Series destacadas</h2>
             <hr color="steelblue">
+        </section>
+            <!--
             <div class="Tendencias">
                 <article>
                     <img src="assets/incompatibles.jpg" alt="Peliculas">
@@ -106,9 +147,13 @@
                 </article> 
             </div>
         </section>
+        -->
         <footer class="footer">
+            <article>
+                <a href="index.html"><img src="assets/logoheader2.jpg" alt="Logo"></a>
+            </article>
             <article class="partesuperior">
-                <h2>Creadores de la pagina web: Francisco Rolon, Tomas Jarsun y Joaquin Rios</h2>
+                <h2>Creadores de la página web: Francisco Rolón, Tomás Jarsun y Joaquín Ríos</h2>
             </article>
             <article class="parteinferior">
                 <a href="https://www.instagram.com/" alt="pagina" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
@@ -117,7 +162,10 @@
             </article>
         </footer>
     </main>
+    
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <script src="js/master.js"></script>
 
 </body>
 </html>
