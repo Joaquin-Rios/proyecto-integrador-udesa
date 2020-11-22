@@ -10,13 +10,10 @@ window.addEventListener('load', function(){
         console.log(populares.results);
         populares.results.forEach(pelicula => {
                 let articulo = document.createElement('article')
-                articulo.innerHTML += `<img src='https://image.tmdb.org/t/p/w500${pelicula.poster_path}' alt='${pelicula.title}'/> `
-                primeraseccion.append(articulo)
+                articulo.innerHTML += ` <a><img src= "https://image.tmdb.org/t/p/w500${pelicula.poster_path}" alt='${pelicula.title}'/></a>`
+                 primeraseccion.append(articulo)
 
-                articulo.style.height = '50 px';
-
-                articulo.style.display = 'flex';
-               // articulo.style.gridTemplateRows = '1fr 1fr ';
+                
          
         });
     })
@@ -36,7 +33,7 @@ window.addEventListener('load', function(){
         console.log(nuevas.results);
         nuevas.results.forEach(pelicula => {
             let articulo2 = document.createElement('article')
-            articulo2.innerHTML += `<img src='https://image.tmdb.org/t/p/w500${pelicula.poster_path}' alt='${pelicula.title}'/> `
+            articulo2.innerHTML += `<a><img src='https://image.tmdb.org/t/p/w500${pelicula.poster_path}' alt='${pelicula.title}'/></a> `
             segundaseccion.append(articulo2)
         })
     })
@@ -54,7 +51,7 @@ window.addEventListener('load', function(){
         console.log(series.results)
         series.results.forEach (series => {
             let articulo3 = document.createElement('article')
-            articulo3.innerHTML += `<img src='https://image.tmdb.org/t/p/w500${series.poster_path}' alt='${series.title}'/> `
+            articulo3.innerHTML += `<a><img src='https://image.tmdb.org/t/p/w500${series.poster_path}' alt='${series.title}'/></a> `
             terceraseccion.append(articulo3)
         })
 

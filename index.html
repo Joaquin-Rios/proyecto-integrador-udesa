@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Integrador</title>
-    <link rel="stylesheet" href="css/master.css">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="uikit-3.5.9/css/uikit.min.css" />
     <script src="uikit-3.5.9/js/uikit.min.js"></script>
     <script src="uikit-3.5.9/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="css/master.css">
     
 </head>
 <body>
@@ -28,7 +28,7 @@
                         <a href="generos.html">Géneros</a>
                     </li>
                     <li>
-                        <a href="#">Recomendado</a>
+                        <a href="favoritos.html">Mis Favoritos</a>
                     </li>
                     <li>
                         <form class="uk-search uk-search-default">
@@ -41,18 +41,18 @@
             
         </header>
         <h1 class="Bienvenidos"> Bienvenidos a Start Films</h1>
-        <section class="carrusel">
-            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+        <section>
+            <div class=" slider uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
 
-                <ul class="uk-slideshow-items">
+                <ul class="list-slider uk-slideshow-items">
                     <li>
-                        <img src="assets/Superman.jpg" alt="foto1" uk-cover>
+                        <img class="img-slider" src="assets/Superman.jpg" alt="foto1" uk-cover style="width: 100%; height:1080px">
                     </li>
                     <li>
-                        <img src="assets/Thor.jpg" alt="foto2" uk-cover>
+                        <img class="img-slider" src="assets/Thor.jpg" alt="foto2" uk-cover style="width: 100%; height:1080px">
                     </li>
                     <li>
-                        <img src="assets/AvengersSlider.jpg" alt="foto3" uk-cover>
+                        <img class="img-slider" src="assets/AvengersSlider.jpg" alt="foto3" uk-cover style="width: 100%; height:1080px">
                     </li>
                 </ul>
             
@@ -62,14 +62,12 @@
             </div>
         </section>
         
-        <br>
-        <br>
-        <br>
         
+        
+        
+        <h2 class="peliculas"> Películas Populares </h2>
         <section class="primeraseccion">
-            <hr color="steelblue">
-            <h2 class="peliculas"> Películas Populares </h2>
-            <hr color="steelblue">
+            
         </section>
             <!--
             <div class="Tendencias">
@@ -94,11 +92,9 @@
             </div>
         -->
 
-        
+        <h2 class="peliculas"> Proximamente</h2>
         <section class="segundaseccion">
-            <hr color="steelblue">
-            <h2 class="peliculas"> Proximamente</h2>
-            <hr color="steelblue">
+            
         </section>
         
             <!--
@@ -122,10 +118,9 @@
             </div>
         </section>
     -->
+        <h2 class="peliculas">Series destacadas</h2>
         <section class="terceraseccion">
-            <hr color="steelblue">
-            <h2 class="peliculas">Series destacadas</h2>
-            <hr color="steelblue">
+            
         </section>
             <!--
             <div class="Tendencias">
@@ -149,17 +144,17 @@
         </section>
         -->
         <footer class="footer">
-            <article>
+            <div>
                 <a href="index.html"><img src="assets/logoheader2.jpg" alt="Logo"></a>
-            </article>
-            <article class="partesuperior">
+            </div>
+            <div class="partesuperior">
                 <h2>Creadores de la página web: Francisco Rolón, Tomás Jarsun y Joaquín Ríos</h2>
-            </article>
-            <article class="parteinferior">
+            </div>
+            <div class="parteinferior">
                 <a href="https://www.instagram.com/" alt="pagina" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
                 <a href="https://www.facebook.com" alt="pagina" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
                 <a href="https://www.twitter.com" alt="pagina" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
-            </article>
+            </div>
         </footer>
     </main>
     
