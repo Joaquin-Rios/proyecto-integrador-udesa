@@ -10,7 +10,7 @@ window.addEventListener('load', function(){
         console.log(populares.results);
         populares.results.forEach(pelicula => {
                 let articulo = document.createElement('article')
-                articulo.innerHTML += ` <a><img src= "https://image.tmdb.org/t/p/w500${pelicula.poster_path}" alt='${pelicula.title}'/></a>`
+                articulo.innerHTML += ` <a href= "detallePelicula.html?id=${pelicula.id}&title=${pelicula.title}"><img src= "https://image.tmdb.org/t/p/w500${pelicula.poster_path}" alt='${pelicula.title}'/></a>`
                  primeraseccion.append(articulo)
 
                 
@@ -33,7 +33,7 @@ window.addEventListener('load', function(){
         console.log(nuevas.results);
         nuevas.results.forEach(pelicula => {
             let articulo2 = document.createElement('article')
-            articulo2.innerHTML += `<a><img src='https://image.tmdb.org/t/p/w500${pelicula.poster_path}' alt='${pelicula.title}'/></a> `
+            articulo2.innerHTML += `<a href= "detallePelicula.html?id=${pelicula.id}&title=${pelicula.title}"><img src='https://image.tmdb.org/t/p/w500${pelicula.poster_path}' alt='${pelicula.title}'/></a> `
             segundaseccion.append(articulo2)
         })
     })
@@ -51,7 +51,7 @@ window.addEventListener('load', function(){
         console.log(series.results)
         series.results.forEach (series => {
             let articulo3 = document.createElement('article')
-            articulo3.innerHTML += `<a><img src='https://image.tmdb.org/t/p/w500${series.poster_path}' alt='${series.title}'/></a> `
+            articulo3.innerHTML += `<a href= "detallePelicula.html?id=${series.id}&title=${series.name}"><img src='https://image.tmdb.org/t/p/w500${series.poster_path}' alt='${series.name}'/></a> `
             terceraseccion.append(articulo3)
         })
 

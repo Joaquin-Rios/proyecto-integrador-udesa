@@ -18,7 +18,9 @@
     text-align: center;
     z-index: 10;
     
+    
 }
+
  img{
      width: 100%;
      
@@ -187,21 +189,14 @@ font-size: 30px;
     color: steelblue;
     text-decoration: none;
     border: 1px solid rgb(150, 147, 147);
-<<<<<<< HEAD
-    padding: 22git px;
-=======
     padding: 22px;
-    font-family: 'Russo One', sans-serif;
-
->>>>>>> eddd5de27ca6f202a56d4c918474787a56040e9b
 }
 .Generos li a:hover{
     text-decoration: underline;
 }
-.detalle{
+#detalle{
     background-color: black;
-    display: grid;
-    grid-template-rows: 0.5fr 1fr;
+    color: white;
 }
 .infofoto{
     width: 100%;
