@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/master.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="uikit-3.5.9/css/uikit.min.css" />
+    <script src="uikit-3.5.9/js/uikit.min.js"></script>
+    <script src="uikit-3.5.9/js/uikit-icons.min.js"></script>
+    
 </head>
 <body>
 <main class="container">
@@ -23,17 +27,20 @@
                     <a href="generos.html">Géneros</a>
                 </li>
                 <li>
-                    <a href="#">Recomendado</a>
+                    <a href="favoritos.html">Mis Favoritos</a>
                 </li>
                 <li>
-                    <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+                    <form class="uk-search uk-search-default">
+                        <input class="uk-search-input" type="search" placeholder="Search...">
+                    </form>
                 </li>
             </ul>
            
         </nav>
         
     </header>
-    <section class="Generos"> 
+    <section id="Generos"> 
+    <!--
     <ul>
         <li>
             <a href="terror.html">Terror</a>
@@ -60,6 +67,7 @@
             <a href="series.html">Series</a>
         </li>
     </ul>
+-->
 
     </section>
     <footer class="footer">
@@ -73,6 +81,7 @@
         </article>
     </footer>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="js/generos.js"></script>
 </main>
 </body>
 

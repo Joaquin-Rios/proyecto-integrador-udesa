@@ -11,14 +11,16 @@
     background-color: white;
     width: 100%;
     display: grid;
-    grid-template-rows: 0,5fr 0,5fr;
-
+    grid-template-rows: 0.5fr 0.5fr;
     border-bottom:5px solid steelblue ;
     font-family: 'Montserrat', sans-serif;
     align-items: center;
     text-align: center;
+    z-index: 10;
+    
     
 }
+
  img{
      width: 100%;
      
@@ -60,30 +62,60 @@
     border-bottom: 5px solid steelblue;
   */
 
-.carrusel{
-    width: 100%;
-    height: 200px;
-   ;
-}    
+
+
 
 .Bienvenidos{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     color: steelblue;
     background-color: black;
-    padding: 15px;
+    margin-top: 110px;
+    border-bottom: 5px solid steelblue;
+    margin-bottom: 0%;
 }
+.slider{
+    height: 600px;
+}
+.list-slider{
+    min-height: 600px;
+}
+.img-slider{
+    height: 100%;
+    width: 1264px;
+}
+
 .peliculas{
     text-align: center;
     background-color: black;
     color: steelblue;
     font-family: 'Montserrat', sans-serif;
+    border: 5px solid steelblue;
+    margin: 0%;
     
     
 }
-.peliculas h2{
-    padding: 10px;
+
+
+.primeraseccion {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    background-color: black;
+    gap: 7px;
 }
+.segundaseccion{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    background-color: black;
+    gap: 7px;
+}
+.terceraseccion{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    background-color: black;
+    gap: 7px;
+}
+
 .Tendencias{
     display: grid;
     grid-template-columns: 1fr;
@@ -93,6 +125,7 @@
     
 
 }
+
 .Tendencias img{
     width: 100%;
     justify-content: center;
@@ -157,17 +190,29 @@ font-size: 30px;
     text-decoration: none;
     border: 1px solid rgb(150, 147, 147);
     padding: 22px;
-    font-family: 'Russo One', sans-serif;
-
 }
 .Generos li a:hover{
     text-decoration: underline;
 }
-.detalle{
+#detalle{
     background-color: black;
+    margin-top: 20px;
     display: grid;
-    grid-template-rows: 0.5fr 1fr;
+    grid-template-rows: 3fr 1fr;
+  
 }
+#serieDetalle{
+    background-color: black;
+    margin-top: 20px;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+.cssDetalle {
+    color: steelblue;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif; 
+}
+
 .infofoto{
     width: 100%;
     padding: 20px;
@@ -209,6 +254,45 @@ font-size: 30px;
     .logo{
         width: 40%;
     }
+    .primeraseccion {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: black;
+        gap: 7px;
+    }
+    .segundaseccion{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: black;
+        gap: 7px;
+    }
+    .terceraseccion{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        background-color: black;
+        gap: 7px;
+    }
+    
+    #detalle{
+        background-color: black;
+        margin-top: 50px;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 2fr;
+  
+    }
+    #serieDetalle{
+        background-color: black;
+        margin-top: 50px;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns:  1fr 2fr;
+    }
+    .cssDetalle {
+       color: steelblue;
+       font-size: 20px;
+       font-family: 'Montserrat', sans-serif; 
+    }
     .Tendencias{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -221,12 +305,12 @@ font-size: 30px;
         right: 15%;
     }
     .footer{
-        background-color:rgb(94, 92, 92);
+        background-color:steelblue;
         color: white;
         display: flex;
         justify-content: space-between;
         padding: 10px;
-        border-top: 5px solid steelblue;
+        border-top: 5px solid black;
     }
     .partesuperior{
         width: 33%;
@@ -265,6 +349,44 @@ font-size: 30px;
     }     
     .logo{
         width: 40%;
+    }
+    .primeraseccion {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+        background-color: black;
+        gap: 7px;
+    }
+    .segundaseccion{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+        background-color: black;
+        gap: 7px;
+    }
+    .terceraseccion{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        background-color: black;
+        gap: 7px;
+    }
+    #detalle{
+        background-color: black;
+        margin-top: 70px;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 3fr;
+  
+    }
+    #serieDetalle{
+        background-color: black;
+        margin-top: 70px;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns:  1fr 3fr;
+    }
+    .cssDetalle {
+       color: steelblue;
+       font-size: 20px;
+       font-family: 'Montserrat', sans-serif; 
     }
     .Tendencias{
         display: grid;
