@@ -1,4 +1,40 @@
 window.addEventListener("load",function(){
+
+    let detalleSerie = document.getElementById("serieDetalle")
+    let miId = location.search
+    let idObjeto = new URLSearchParams(miId)
+    let id = idObjeto.get('id')
+    console.log(id)
+
+    fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=3006ac419e664e7a2567a8acf0d5ba5c&language=en-US`)
+    .then(function(respuesta){
+        return respuesta.json();
+    })
+    .then(function(series){
+        console.log(series);
+        let titulo = series.name;
+        let overview = series.overview;
+        let foto = "http://image.tmdb.org/t/p/w500" + series.poster_path;
+        let puntuacion = series.vote_average;
+        let emision = series.first_air_date;
+        let genero = series.genres.name;
+
+        detalleSerie.innerHTML += `<h2><img src=`+foto+`></img></h2>`
+        detalleSerie.innerHTML += `<h2 class="cssDetalle">Title: ${titulo}</h2>`
+        detalleSerie.innerHTML += `<h2 class="cssDetalle">Calification: ${puntuacion}</h2>`
+        detalleSerie.innerHTML += `<h2 class="cssDetalle">Review: ${overview}</h2>`
+        detalleSerie.innerHTML += `<h2 class="cssDetalle"> First Air Date: ${emision}</h2>`
+        detalleSerie.innerHTML += `<h2 class="cssDetalle"> Genres: ${genero}</h2>`
+        
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+
+
+
+
+    /*
     let serieDetalle = document.getElementById("serieDetalle")
     let detalleSerie = location.search
     let detalleSerieObjeto = new URLSearchParams(detalleSerie)
@@ -14,6 +50,6 @@ window.addEventListener("load",function(){
 
 
 
-
+*/
     
 })

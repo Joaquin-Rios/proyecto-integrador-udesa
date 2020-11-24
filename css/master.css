@@ -175,24 +175,30 @@
     font-size: 20px;
     
 }
-.Generos {
+#Generos {
 text-align: center;
 background-color: black;
 font-size: 30px;
 }
-.Generos li{
+#Generos li{
     display: grid;
     grid-template-rows: 90px;
 }
-.Generos li a {
+#Generos li a {
     text-align: center;
     color: steelblue;
     text-decoration: none;
     border: 1px solid rgb(150, 147, 147);
     padding: 22px;
 }
-.Generos li a:hover{
+#Generos li a:hover{
     text-decoration: underline;
+}
+#generoDetalle{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    background-color: black;
+    gap: 7px;
 }
 #detalle{
     background-color: black;

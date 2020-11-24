@@ -6,17 +6,18 @@ window.addEventListener("load", function(){
         return respuesta.json();
     })
     .then(function(listaG){
-        console.log(listaG);
-        for(let i = 0; i <= listaG.length; i++){
-            console.log(listaG[i]);
+        console.log(listaG.genres);
+        for(let i = 0; i <= listaG.genres.length; i++){
+            console.log(listaG.genres[i].name);
             let articulo = document.createElement("article")
-            articulo.innerHTML += `<a><ul><li>hola</li></ul></a>`
+            articulo.innerHTML += `<a href="detalleGeneros.html?id=${listaG.genres[i].id}"><ul><li>${listaG.genres[i].name}</li></ul></a>`
+            
             generos.append(articulo)
         }
         
     })
     .catch(function(error){
-        console.log("error");
+        console.log(error);
     })
 
 
