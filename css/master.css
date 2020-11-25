@@ -76,14 +76,16 @@
 }
 .slider{
     height: 600px;
+    background-color: black;
 }
 .list-slider{
-    min-height: 600px;
+    min-height: 100% !important;
 }
 .img-slider{
     height: 100%;
-    width: 1264px;
+    width: 50%;
 }
+
 
 .peliculas{
     text-align: center;
