@@ -4,28 +4,32 @@ window.addEventListener('load', function(){
 
     fetch(`https://api.themoviedb.org/3/movie/popular?api_key=3006ac419e664e7a2567a8acf0d5ba5c&language=en-US&page=1`)
     .then(function(respuesta){
-        return respuesta.json();
+        return respuesta.json()
     })
     .then(function(populares){
-        console.log(populares.results);
+        //console.log(populares.results)
         populares.results.forEach(pelicula => {
                 let articulo = document.createElement('article')
                 articulo.innerHTML += ` <a href= "detallePelicula.html?id=${pelicula.id}&title=${pelicula.title}"><img src= "https://image.tmdb.org/t/p/w500${pelicula.poster_path}" alt='${pelicula.title}'/></a>
                 <div>
-                    <a id="${JSON.stringify(populares.results)}" href="#" class="btn btn-info btn-block botonMiLista">Mis Favoritos</a>
+                    <a id="${JSON.stringify(pelicula)}" href="#" class="btn btn-info btn-block botonMiLista">Mis Favoritos</a>
                 </div>`
                  primeraseccion.append(articulo)
          
-        });
-        let botonMiLista = document.querySelector('.botonMiLista');
-        let arrayMiListaDeFavoritas;
-        console.log(botonMiLista);
-        botonMiLista.forEach( pelicula => {
+        })
+    
+        
+    
+        let botonMiLista = document.querySelectorAll('.botonMiLista')
+        let arrayMiListaDeFavoritas
+        //console.log(botonMiLista)
+        botonMiLista.forEach(pelicula => {
             pelicula.addEventListener('click', function(evento){
+            //  console.log(this.id)
                 evento.preventDefault()
                 let miListaDePeliculas = localStorage.getItem('miLista')
                 if(miListaDePeliculas == null){
-                    arrayMiListaDeFavoritas = [];
+                    arrayMiListaDeFavoritas = []
                 }else{
                     arrayMiListaDeFavoritas = JSON.parse(miListaDePeliculas)
                 }
@@ -33,17 +37,18 @@ window.addEventListener('load', function(){
                 localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
 
             })
+        
 
-
+            
+     
         })
 
-
-
-
+        
     })
     .catch(function(error){
         console.log(error);
     })
+
 
    
 

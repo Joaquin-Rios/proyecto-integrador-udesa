@@ -1,4 +1,5 @@
 window.addEventListener('load', function(){
-    let miListaDeFavoritos = 
+    let miListaDeFavoritos = JSON.parse(localStorage.getItem('miLista'))
+    console.log(miListaDeFavoritos) 
 
 })
