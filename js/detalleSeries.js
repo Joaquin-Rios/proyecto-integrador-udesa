@@ -20,7 +20,7 @@ window.addEventListener("load",function(){
         let genero = series.genres.name;
 
         detalleSerie.innerHTML += `<h2><img src=`+foto+`></img></h2>`
-        detalleSerie.innerHTML += `<h2 class="cssDetalle">Title: ${titulo}</h2>`
+        detalleSerie.innerHTML += `<h2 class="cssDetalle"> ${titulo}</h2>`
         detalleSerie.innerHTML += `<h2 class="cssDetalle">Calification: ${puntuacion}</h2>`
         detalleSerie.innerHTML += `<h2 class="cssDetalle">Review: ${overview}</h2>`
         detalleSerie.innerHTML += `<h2 class="cssDetalle"> First Air Date: ${emision}</h2>`

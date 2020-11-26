@@ -21,7 +21,7 @@ window.addEventListener("load",function(){
         let puntuacion = peliculas.vote_average;
 
         detallePeli.innerHTML += `<h2><img src=`+foto+`></img></h2>`
-        detallePeli.innerHTML += `<h2 class="cssDetalle">Title: ${title}</h2>`
+        detallePeli.innerHTML += `<h2 class="cssDetalle"> ${title}</h2>`
         detallePeli.innerHTML += `<h2 class="cssDetalle">Calification: ${puntuacion}</h2>`
         detallePeli.innerHTML += `<h2 class="cssDetalle">Review: ${overview}</h2>`
         

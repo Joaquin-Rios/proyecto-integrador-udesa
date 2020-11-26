@@ -6,6 +6,7 @@
 .conteiner{
     display: grid;
     
+    
 }
 .header{
     background-color: white;
@@ -17,9 +18,25 @@
     align-items: center;
     text-align: center;
     z-index: 10;
-    
-    
-    
+     
+}
+.headerG{
+    background-color: white;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr;
+    border-bottom:5px solid steelblue ;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+     
+}
+.articulo{
+    min-height: 400px;
+}
+.articulo img{
+    min-height: 400px;
 }
 
  img{
@@ -197,9 +214,10 @@
     margin: 0%;
 }
 #Generos {
- text-align: center;
- background-color: black;
- font-size: 30px;
+   text-align: center;
+   background-color: black;
+   font-size: 30px;
+  
 
 }
 
@@ -224,26 +242,28 @@
 #detalle{
     background-color: black;
     margin-top: 0px;
-   
-    
+    padding: 5px;
 }
 #detalle img{
-    height: 350px;
-    width: 350px;
+    height: 300px;
+    width: 300px;
     border: 3px solid gray;
     margin: 5px;
-    justify-content: center;
+    margin-left: 5px;
+    
 }
 #serieDetalle{
     background-color: black;
     margin-top: 0px;
+    padding: 5px;
     
 }
 #serieDetalle img{
     margin: 5px;
     border: 3px solid gray;
-    height: 350px;
-    width: 350px;
+    height: 300px;
+    width: 300px;
+    margin-left: 5px;
 }
 .cssDetalle {
     color: steelblue;
@@ -284,6 +304,18 @@
         font-family: 'Montserrat', sans-serif;
         align-items: center;
         position: fixed;
+        
+
+    }
+    .headerG{
+        background-color: white;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        grid-template-rows: 1fr;
+        border-bottom:5px solid steelblue ;
+        font-family: 'Montserrat', sans-serif;
+        align-items: center;
 
     }
     .menu .opciones {
@@ -299,6 +331,10 @@
     .Bienvenidos{
         margin-top: 80px;
         border-bottom: 3px solid steelblue;
+    }
+    .slider{
+        height: 350px;
+        background-color: black;
     }
     .primeraseccion {
         display: grid;
@@ -319,25 +355,43 @@
         gap: 7px;
     }
     
+    
     #detalle{
         background-color: black;
-        margin-top: 50px;
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 2fr;
-  
+        margin-top: 80px;
+        text-align: center;
+    }
+    #detalle img{
+        height: 400px;
+        width: 400px;
+        border: 3px solid gray;
+        margin: 10px;
     }
     #serieDetalle{
         background-color: black;
-        margin-top: 50px;
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns:  1fr 2fr;
+        margin-top: 80px;
+        text-align: center;
+    }
+    #serieDetalle img{
+        height: 400px;
+        width: 400px;
+        border: 3px solid gray;
+        margin: 10px;
     }
     .cssDetalle {
        color: steelblue;
        font-size: 20px;
        font-family: 'Montserrat', sans-serif; 
+    }
+    #generoDetalle{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: black;
+        gap: 7px;
+    }
+    #tituloGenero{
+        margin-top: 75px;
+
     }
     .Tendencias{
         display: grid;
@@ -381,11 +435,20 @@
         display: flex;
         justify-content: space-between;
         grid-template-rows: 1fr;
-    
         border-bottom:5px solid steelblue ;
         font-family: 'Montserrat', sans-serif;
         align-items: center;
         position: fixed;
+    }
+    .headerG{
+        background-color: white;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        grid-template-rows: 1fr;
+        border-bottom:5px solid steelblue ;
+        font-family: 'Montserrat', sans-serif;
+        align-items: center;
     }
     .menu .opciones {
         display: flex;
@@ -402,6 +465,10 @@
     .Bienvenidos{
         margin-top: 80px;
         border-bottom: 3px solid steelblue;
+    }
+    .slider{
+        height: 500px;
+        background-color: black;
     }
 
     
@@ -425,23 +492,44 @@
     }
     #detalle{
         background-color: black;
-        margin-top: 70px;
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 3fr;
-  
+        margin-top: 80px;
+        text-align: center;
+    }
+    #detalle img{
+        height: 500px;
+        width: 500px;
+        border: 3px solid gray;
+        margin: 10px;
+        
+        
     }
     #serieDetalle{
         background-color: black;
-        margin-top: 70px;
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns:  1fr 3fr;
+        margin-top: 80px;
+        text-align: center;
+    }
+    #serieDetalle img{
+        height: 500px;
+        width: 500px;
+        border: 3px solid gray;
+        margin: 10px;
+        
+        
     }
     .cssDetalle {
        color: steelblue;
        font-size: 20px;
        font-family: 'Montserrat', sans-serif; 
+    }
+    #generoDetalle{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        background-color: black;
+        gap: 7px;
+    }
+    #tituloGenero{
+        margin-top: 75px;
+
     }
     .Tendencias{
         display: grid;
