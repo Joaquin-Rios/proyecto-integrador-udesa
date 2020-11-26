@@ -17,41 +17,59 @@ window.addEventListener("load",function(){
         let foto = "http://image.tmdb.org/t/p/w500" + series.poster_path
         let puntuacion = series.vote_average
         let emision = series.first_air_date
-        let genero = series.genres.name
+        
+        
 
         detalleSerie.innerHTML += `<h2><img src=`+foto+`></img></h2>`
         detalleSerie.innerHTML += `<h2 class="cssDetalle"> ${titulo}</h2>`
         detalleSerie.innerHTML += `<h2 class="cssDetalle">Calification: ${puntuacion}</h2>`
         detalleSerie.innerHTML += `<h2 class="cssDetalle">Review: ${overview}</h2>`
         detalleSerie.innerHTML += `<h2 class="cssDetalle"> First Air Date: ${emision}</h2>`
-        detalleSerie.innerHTML += `<h2 class="cssDetalle"> Genres: ${genero}</h2>`
-        detalleSerie.innerHTML += `<article>
-        <a id="${JSON.stringify(series)}" href="#" class="btn btn-info btn-block botonMiLista">Mis Favoritos</a>
+        //detalleSerie.innerHTML += `<h2 class="cssDetalle"> Genres: ${genero}</h2>`
+        detalleSerie.innerHTML += '<a href="generos.html?"><h2 class="cssDetalle">Genres:</h2></a>'
+        series.genres.forEach (generos => {
+            //console.log(generos)
+           
+            detalleSerie.innerHTML += `<h3 class="cssDetalle"> ${generos.name} </h3>`
 
-    </article>`
+
+        })
         
-        let botonMiLista = document.querySelectorAll('.botonMiLista')
+        
+        let botonMiLista = document.querySelector('.botonMiLista')
         let arrayMiListaDeFavoritas
         //console.log(botonMiLista)
-        botonMiLista.forEach(pelicula => {
-            pelicula.addEventListener('click', function(e){
+            botonMiLista.addEventListener('click', function(e){
               //console.log(e.target.href)
+              console.log(series)
                 e.preventDefault()
                 let miListaDePeliculas = localStorage.getItem('miLista')
                 if(miListaDePeliculas == null){
                     arrayMiListaDeFavoritas = []
+                    arrayMiListaDeFavoritas.push(series)
                 }else{
                     arrayMiListaDeFavoritas = JSON.parse(miListaDePeliculas)
+                    let peliculasLista = arrayMiListaDeFavoritas.filter(function(serie){
+                        return serie.id == series.id
+                    })
+                    if( peliculasLista.length == 0){
+                        arrayMiListaDeFavoritas.push(series)
+
+                    }
+                    
                 }
-                arrayMiListaDeFavoritas.push(JSON.parse(this.id))
+                
                 localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
 
             })
         
 
             
+        
+
+            
      
-        })
+        
     })
     .catch(function(error){
         console.log(error);

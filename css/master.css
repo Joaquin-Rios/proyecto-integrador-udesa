@@ -292,6 +292,22 @@
 .info h3{
     font-family: 'Montserrat', sans-serif;
 }
+.peliculasFav{
+    text-align: center;
+    background-color: black;
+    color: steelblue;
+    font-family: 'Montserrat', sans-serif;
+    border: 3px solid steelblue;
+    margin: 0px;
+    
+    
+}
+.misFavoritas{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: black;
+    gap: 7px;
+}
 
 @media (min-width:768px){
     .header{
@@ -383,6 +399,7 @@
        font-size: 20px;
        font-family: 'Montserrat', sans-serif; 
     }
+
     #generoDetalle{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -423,6 +440,22 @@
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr;
+    }
+    .peliculasFav{
+        text-align: center;
+        background-color: black;
+        color: steelblue;
+        font-family: 'Montserrat', sans-serif;
+        border: 3px solid steelblue;
+        margin: 0;
+        padding-top: 75px;
+
+    }
+    .misFavoritas{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        background-color: black;
+        gap: 7px;
     }
 
 
@@ -559,6 +592,22 @@
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 3fr;
+    }
+    .peliculasFav{
+        text-align: center;
+        background-color: black;
+        color: steelblue;
+        font-family: 'Montserrat', sans-serif;
+        border: 3px solid steelblue;
+        margin: 0;
+        padding-top: 75px;
+
+    }
+    .misFavoritas{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: black;
+        gap: 7px;
     }
 
 

@@ -4,6 +4,7 @@ window.addEventListener("load",function(){
     let miId = location.search
     let idObjeto = new URLSearchParams(miId)
     let id = idObjeto.get('id')
+    
     if(id!= null){
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=3006ac419e664e7a2567a8acf0d5ba5c&language=en-US`)
         .then(function(respuesta){
@@ -35,18 +36,21 @@ window.addEventListener("load",function(){
                     let miListaDePeliculas = localStorage.getItem('miLista')
                     if(miListaDePeliculas == null){
                         arrayMiListaDeFavoritas = []
+                        arrayMiListaDeFavoritas.push(peliculas)
                     }else{
                         arrayMiListaDeFavoritas = JSON.parse(miListaDePeliculas)
-                    }
-                    arrayMiListaDeFavoritas.forEach(verificacion => {
-                        if(miListaDePeliculas == peliculas.id){
-                            arrayMiListaDeFavoritas.pop(peliculas) 
-                        }else{
+                        let peliculasLista = arrayMiListaDeFavoritas.filter(function(pelicula){
+                            return pelicula.id == peliculas.id
+                        })
+                        if( peliculasLista.length == 0){
                             arrayMiListaDeFavoritas.push(peliculas)
+
                         }
                         
-                    })
-                        localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
+                
+                    }
+                    
+                    localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
                     
     
                 })

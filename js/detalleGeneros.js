@@ -24,36 +24,11 @@ window.addEventListener('load', function(){
         generos.results.forEach(pelicula => {
                 tituloGenero.innerHTML = `${name}`
                 let articulo = document.createElement('article')
-                articulo.innerHTML += ` <a href= "detallePelicula.html?id=${pelicula.id}&title=${pelicula.title}"><img src= "https://image.tmdb.org/t/p/w500${pelicula.poster_path}" alt='${pelicula.title}'/></a>
-                <div>
-                    <a id="${JSON.stringify(generos.results)}" href="#" class="btn btn-info btn-block botonMiLista">Mis Favoritos</a>
-                </div>`
+                articulo.innerHTML += ` <a href= "detallePelicula.html?id=${pelicula.id}&title=${pelicula.title}"><img src= "https://image.tmdb.org/t/p/w500${pelicula.poster_path}" alt='${pelicula.title}'/></a>`
                 detalleGenero.append(articulo)
          
         });
-     /*   let botonMiLista = document.querySelector('.botonMiLista');
-        let arrayMiListaDeFavoritas;
-        console.log(botonMiLista);
-        botonMiLista.forEach( pelicula => {
-            pelicula.addEventListener('click', function(evento){
-                evento.preventDefault()
-                let miListaDePeliculas = localStorage.getItem('miLista')
-                if(miListaDePeliculas == null){
-                    arrayMiListaDeFavoritas = [];
-                }else{
-                    arrayMiListaDeFavoritas = JSON.parse(miListaDePeliculas)
-                }
-                arrayMiListaDeFavoritas.push(JSON.parse(this.id))
-                localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
-
-            })*/
-
-
         
-
-
-
-
     })
     .catch(function(error){
         console.log(error);
