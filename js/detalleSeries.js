@@ -8,16 +8,16 @@ window.addEventListener("load",function(){
 
     fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=3006ac419e664e7a2567a8acf0d5ba5c&language=en-US`)
     .then(function(respuesta){
-        return respuesta.json();
+        return respuesta.json()
     })
     .then(function(series){
-        console.log(series);
-        let titulo = series.name;
-        let overview = series.overview;
-        let foto = "http://image.tmdb.org/t/p/w500" + series.poster_path;
-        let puntuacion = series.vote_average;
-        let emision = series.first_air_date;
-        let genero = series.genres.name;
+        console.log(series)
+        let titulo = series.name
+        let overview = series.overview
+        let foto = "http://image.tmdb.org/t/p/w500" + series.poster_path
+        let puntuacion = series.vote_average
+        let emision = series.first_air_date
+        let genero = series.genres.name
 
         detalleSerie.innerHTML += `<h2><img src=`+foto+`></img></h2>`
         detalleSerie.innerHTML += `<h2 class="cssDetalle"> ${titulo}</h2>`
@@ -25,7 +25,33 @@ window.addEventListener("load",function(){
         detalleSerie.innerHTML += `<h2 class="cssDetalle">Review: ${overview}</h2>`
         detalleSerie.innerHTML += `<h2 class="cssDetalle"> First Air Date: ${emision}</h2>`
         detalleSerie.innerHTML += `<h2 class="cssDetalle"> Genres: ${genero}</h2>`
+        detalleSerie.innerHTML += `<article>
+        <a id="${JSON.stringify(series)}" href="#" class="btn btn-info btn-block botonMiLista">Mis Favoritos</a>
+
+    </article>`
         
+        let botonMiLista = document.querySelectorAll('.botonMiLista')
+        let arrayMiListaDeFavoritas
+        //console.log(botonMiLista)
+        botonMiLista.forEach(pelicula => {
+            pelicula.addEventListener('click', function(e){
+              //console.log(e.target.href)
+                e.preventDefault()
+                let miListaDePeliculas = localStorage.getItem('miLista')
+                if(miListaDePeliculas == null){
+                    arrayMiListaDeFavoritas = []
+                }else{
+                    arrayMiListaDeFavoritas = JSON.parse(miListaDePeliculas)
+                }
+                arrayMiListaDeFavoritas.push(JSON.parse(this.id))
+                localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
+
+            })
+        
+
+            
+     
+        })
     })
     .catch(function(error){
         console.log(error);

@@ -10,30 +10,27 @@ window.addEventListener('load', function(){
         //console.log(populares.results)
         populares.results.forEach(pelicula => {
                 let articulo = document.createElement('article')
-                articulo.innerHTML += ` <a href= "detallePelicula.html?id=${pelicula.id}&title=${pelicula.title}"><img src= "https://image.tmdb.org/t/p/w500${pelicula.poster_path}" alt='${pelicula.title}'/></a>
-                <div>
-                    <a id="${JSON.stringify(pelicula)}" href="#" class="btn btn-info btn-block botonMiLista">Mis Favoritos</a>
-                </div>`
+                articulo.innerHTML += ` <a href= "detallePelicula.html?id=${pelicula.id}&title=${pelicula.title}"><img src= "https://image.tmdb.org/t/p/w500${pelicula.poster_path}" alt='${pelicula.title}'/></a>`
                  primeraseccion.append(articulo)
          
         })
     
         
-    
-        let botonMiLista = document.querySelectorAll('.botonMiLista')
+        
+        /*let botonMiLista = document.querySelectorAll('.botonMiLista')
         let arrayMiListaDeFavoritas
         //console.log(botonMiLista)
         botonMiLista.forEach(pelicula => {
-            pelicula.addEventListener('click', function(evento){
+            pelicula.addEventListener('click', function(e){
             //  console.log(this.id)
-                evento.preventDefault()
+                e.preventDefault()
                 let miListaDePeliculas = localStorage.getItem('miLista')
                 if(miListaDePeliculas == null){
                     arrayMiListaDeFavoritas = []
                 }else{
                     arrayMiListaDeFavoritas = JSON.parse(miListaDePeliculas)
                 }
-                arrayMiListaDeFavoritas.push(JSON.parse(this.id))
+                arrayMiListaDeFavoritas.push(JSON.parse(e.target.href))
                 localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
 
             })
@@ -41,7 +38,7 @@ window.addEventListener('load', function(){
 
             
      
-        })
+        })*/
 
         
     })
@@ -62,10 +59,7 @@ window.addEventListener('load', function(){
         console.log(nuevas.results);
         nuevas.results.forEach(pelicula => {
             let articulo2 = document.createElement('article')
-            articulo2.innerHTML += `<a href= "detallePelicula.html?id=${pelicula.id}&title=${pelicula.title}"><img src='https://image.tmdb.org/t/p/w500${pelicula.poster_path}' alt='${pelicula.title}'/></a> 
-            <div>
-                <a id="${JSON.stringify(nuevas.results)}" href="#" class="btn btn-info btn-block botonMiLista">Mis Favoritos</a>
-            </div>`
+            articulo2.innerHTML += `<a href= "detallePelicula.html?id=${pelicula.id}&title=${pelicula.title}"><img src='https://image.tmdb.org/t/p/w500${pelicula.poster_path}' alt='${pelicula.title}'/></a> `
             segundaseccion.append(articulo2)
         })
     })
@@ -83,10 +77,7 @@ window.addEventListener('load', function(){
         console.log(series.results)
         series.results.forEach (series => {
             let articulo3 = document.createElement('article')
-            articulo3.innerHTML += `<a href= "detalleSerie.html?id=${series.id}&title=${series.name}"><img src='https://image.tmdb.org/t/p/w500${series.poster_path}' alt='${series.name}'/></a>
-            <div>
-                <a id="${JSON.stringify(series.results)}" href="#" class="btn btn-info btn-block botonMiLista">Mis Favoritos</a>
-            </div> `
+            articulo3.innerHTML += `<a href= "detalleSerie.html?id=${series.id}&title=${series.name}"><img src='https://image.tmdb.org/t/p/w500${series.poster_path}' alt='${series.name}'/></a> `
             terceraseccion.append(articulo3)
         })
 
