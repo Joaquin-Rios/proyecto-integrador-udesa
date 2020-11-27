@@ -2,6 +2,7 @@ window.addEventListener('load', function(){
 
     let primeraseccion = document.querySelector('.primeraseccion');
 
+    //SECCION 1
     fetch(`https://api.themoviedb.org/3/movie/popular?api_key=3006ac419e664e7a2567a8acf0d5ba5c&language=en-US&page=1`)
     .then(function(respuesta){
         return respuesta.json()
@@ -14,32 +15,6 @@ window.addEventListener('load', function(){
                  primeraseccion.append(articulo)
          
         })
-    
-        
-        
-        /*let botonMiLista = document.querySelectorAll('.botonMiLista')
-        let arrayMiListaDeFavoritas
-        //console.log(botonMiLista)
-        botonMiLista.forEach(pelicula => {
-            pelicula.addEventListener('click', function(e){
-            //  console.log(this.id)
-                e.preventDefault()
-                let miListaDePeliculas = localStorage.getItem('miLista')
-                if(miListaDePeliculas == null){
-                    arrayMiListaDeFavoritas = []
-                }else{
-                    arrayMiListaDeFavoritas = JSON.parse(miListaDePeliculas)
-                }
-                arrayMiListaDeFavoritas.push(JSON.parse(e.target.href))
-                localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
-
-            })
-        
-
-            
-     
-        })*/
-
         
     })
     .catch(function(error){
@@ -49,6 +24,7 @@ window.addEventListener('load', function(){
 
    
 
+    //SECCION 2
     let segundaseccion = document.querySelector('.segundaseccion');
 
     fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=3006ac419e664e7a2567a8acf0d5ba5c&language=en-US&page=1`)
@@ -67,6 +43,7 @@ window.addEventListener('load', function(){
         console.log(error);
     })
 
+    //SECCION 3
     let terceraseccion = document.querySelector('.terceraseccion')
 
     fetch(`https://api.themoviedb.org/3/tv/popular?api_key=3006ac419e664e7a2567a8acf0d5ba5c&language=en-US&page=1`)
@@ -80,6 +57,7 @@ window.addEventListener('load', function(){
             articulo3.innerHTML += `<a href= "detalleSerie.html?id=${series.id}&title=${series.name}"><img src='https://image.tmdb.org/t/p/w500${series.poster_path}' alt='${series.name}'/></a> `
             terceraseccion.append(articulo3)
         })
+    
 
  })
 

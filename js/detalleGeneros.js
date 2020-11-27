@@ -20,7 +20,7 @@ window.addEventListener('load', function(){
         return respuesta.json();
     })
     .then(function(generos){
-        console.log(generos.results);
+       // console.log(generos.results);
         generos.results.forEach(pelicula => {
                 tituloGenero.innerHTML = `${name}`
                 let articulo = document.createElement('article')

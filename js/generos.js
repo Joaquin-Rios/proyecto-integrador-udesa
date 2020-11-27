@@ -6,9 +6,9 @@ window.addEventListener("load", function(){
         return respuesta.json();
     })
     .then(function(listaG){
-        console.log(listaG.genres);
+       // console.log(listaG.genres);
         for(let i = 0; i <= listaG.genres.length; i++){
-            console.log(listaG.genres[i].name);
+           // console.log(listaG.genres[i].name);
             let articulo = document.createElement("article")
             articulo.innerHTML += `<a href="detalleGeneros.html?id=${listaG.genres[i].id}&name=${listaG.genres[i].name}"><ul><li>${listaG.genres[i].name}</li></ul></a>`
             
@@ -26,13 +26,4 @@ window.addEventListener("load", function(){
     
 })
 
-/*
-listaG.forEach(pelicula => {
-                let articulo = document.createElement('article')
-                articulo.innerHTML += `<a>${listaG.genres}</a>`
-                 generos.append(articulo)
 
-                
-         
-        });
-*/

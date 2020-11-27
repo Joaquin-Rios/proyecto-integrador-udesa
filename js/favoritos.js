@@ -5,7 +5,7 @@ window.addEventListener('load', function(){
 
 
     for(let i = 0; i < miListaDeFavoritas.length; i++){
-        console.log(miListaDeFavoritas[i].poster_path)
+       // console.log(miListaDeFavoritas[i].poster_path)
         let articulo = document.createElement('article')
         articulo.classList.add('articulo')
         articulo.innerHTML += `<a href='detallePelicula.html?id=${miListaDeFavoritas[i].id}&titulo=${miListaDeFavoritas[i].title}'><img src= "http://image.tmdb.org/t/p/w500${miListaDeFavoritas[i].poster_path}"></a>
