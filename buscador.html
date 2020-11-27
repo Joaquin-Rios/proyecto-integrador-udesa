@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="uikit-3.5.9/css/uikit.min.css" />
+    <script src="uikit-3.5.9/js/uikit.min.js"></script>
+    <script src="uikit-3.5.9/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="css/master.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <main class="conteiner">
+        <header class="header">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logoheader2.jpg" alt="Logo"></a>
+            </div>
+
+            <nav class="menu">
+                <ul class="opciones">
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="generos.html">Géneros</a>
+                    </li>
+                    <li>
+                        <a href="favoritos.html">Mis Favoritos</a>
+                    </li>
+                    <li>
+                        <form class="uk-search uk-search-default">
+                            <input class="uk-search-input" type="search" placeholder="Search...">
+                        </form>
+                    </li>
+                </ul>
+                
+            </nav>
+            
+        </header>
+
+       
+ 
+        <section class="parteBuscador">
+            <h2 class="peliculas">Search Results</h2>
+            <form type="submit" method="POST"name="filtro">
+                <label for="filtro" class="nombreFiltro">Choose search filter:</label>
+                <select  name="filtro" class="elBoton">
+                    <option value="#" selected disabled>Movies, series</option>
+                    <option value="peliculas">Movies</option>
+                    <option value="series">Series</option>
+                    <option value="todos">All</option>
+                </select>
+
+            </form>
+            <div class="listaPeliculas">
+
+            </div>
+        </section>
+        
+
+        <footer class="footer">
+            <div class="tmdb">
+                <a href="index.html"><img src="assets/1_vIR7iO-1GnY2xYxL6NiYkw.png" alt="logo"></a>
+            </div>
+            <div class="partesuperior">
+                <h2>Creadores de la página web: Francisco Rolón, Tomás Jarsun y Joaquín Ríos</h2>
+            </div>
+            <div class="parteinferior">
+                <a href="https://www.instagram.com/" alt="pagina" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="https://www.facebook.com" alt="pagina" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="https://www.twitter.com" alt="pagina" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            </div>
+        </footer>
+    </main>
+    
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <script src="js/search.js"></script>
+    
+
+    
+</body>
+
+</html>
