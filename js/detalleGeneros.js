@@ -1,7 +1,9 @@
 window.addEventListener('load', function(){
-
+    //CAPTURAMOS LA VARIABLE CON DOCUMENT A LA CLASE GENERODETALLE
     let detalleGenero = document.getElementById("generoDetalle");
+    //SIRVE PARA ACCEDER A LOS DATOS USANDO LA PROPIEDAD SEARCH DEL OBJETO LOCATION
     let miId = location.search
+    //PERMITE MANEJAR LA INFORMACION DE UNA FORMA MAS COMODA EN JAVA SCRIPT
     let idObjeto = new URLSearchParams(miId)
     
     let id = idObjeto.get('id')

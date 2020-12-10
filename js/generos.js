@@ -7,6 +7,7 @@ window.addEventListener("load", function(){
     })
     .then(function(listaG){
        // console.log(listaG.genres);
+       //ES UN CICLO QUE FUNCIONA PARA LA REPETICION DE INSTRUCCIONES QUE NECESITEMOS
         for(let i = 0; i <= listaG.genres.length; i++){
            // console.log(listaG.genres[i].name);
             let articulo = document.createElement("article")
